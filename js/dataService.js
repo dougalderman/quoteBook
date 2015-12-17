@@ -24,7 +24,7 @@ angular.module('quoteBook').factory('myFactory', function() {
 
   quoteObject.removeData = function(textIn) {
       for (var i = 0; i < quotes.length; i++) {
-        if (textIn === quotes[i]).text) {
+        if (textIn === quotes[i].texts) {
           quotes.splice(i, 1);
         }
       }
