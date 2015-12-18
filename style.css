@@ -1,19 +1,52 @@
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 div.repeat {
   width: 100%;
 }
 
 
-span.author  {
+div.author  {
+  position: absolute;
+  top: 50%;
+  left: 15px;
   font-family: Arial;
   font-size: 20px;
-  display: block;
-  margin: 15px 15px;
+  /* margin: 40px 15px; */
+  width: 25%;
+  display: inline-block;
+
 }
 
-span.text {
+div.text {
+  position: absolute;
+  top: 50%;
+  right: 30px;
   font-family: "Times New Roman";
-  font-size: 12px;
-  display: block;
-  margin: 15px 15px;
+  font-size: 14px;
+  width: 60%;
+  /* margin: 40px 15px; */
+  display: inline-block;
+  /* padding-left: 50px; */
+}
+
+.quotes {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+input.textBox {
+  width: 350px;
+  height: 20px;
+  padding: 1px;
 }

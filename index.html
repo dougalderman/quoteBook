@@ -6,10 +6,24 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="mainCtrl">
+    <input type="text" placeholder="Author" ng-model="addAuthor">
+    <input type="text" class = "textBox" placeholder="Text" ng-model= "addText">
+    <button ng-click="addQuote(addAuthor, addText)">Add quote</button>
+
+    <br><br>
+      <input type="text" class = "textBox" placeholder="Text" ng-model= "removeText">
+    <button ng-click="removeQuote(removeText)">Remove quote</button>
+    <br><br>
     <input type="text" placeholder="Find Text" ng-model="findText">
+
     <div class="repeat" ng-repeat = "quote in quoteArray | filter : findText
-                                | orderBy: '+author'">
-        <span class="author">{{quote.author}}</span><span class="text">{{quote.text}}</span>
+                                | orderBy: '+author' track by $index">
+        <div class = "quotes">
+          <div class="author">{{quote.author}}</div>
+          <div class="text">{{quote.text}}</div>
+          <hr />
+        </div>
+
     </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
